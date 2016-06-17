@@ -10,7 +10,9 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 class PublicUrlAspect implements SingletonInterface {
 
 	/**
-	 * Generate public url for file
+	 * Generates the public url for a file with cachebuster
+	 *
+	 * @see \TYPO3\CMS\Core\Resource\ResourceStorage::getPublicUrl
 	 *
 	 * @param Resource\ResourceStorage $storage
 	 * @param Resource\Driver\DriverInterface $driver
@@ -28,7 +30,7 @@ class PublicUrlAspect implements SingletonInterface {
 	) {
 
 		if ($resourceObject instanceof \TYPO3\CMS\Core\Resource\File) {
-			if ($driver->hasCapability(\TYPO3\CMS\Core\Resource\ResourceStorage::CAPABILITY_PUBLIC)) {
+			if ($storage->isPublic() === TRUE && $storage->isOnline() === TRUE) {
 				$urlData['publicUrl'] = $driver->getPublicUrl($resourceObject->getIdentifier(), $relativeToCurrentScript);
 				if ($urlData['publicUrl'] != NULL) {
 					$urlData['publicUrl'] .= '?' . $resourceObject->getProperties()['modification_date'];
