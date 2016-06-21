@@ -9,7 +9,7 @@ RewriteRule ^(fileadmin|uploads|typo3conf|typo3temp)/ - [E=SETCACHEHEADER:1]
 Header set  Cache-Control "max-age=2592000" env=SETCACHEHEADER
 ```
 
-Files in fileadmin/_processed_ are cachable too, since file modifications to the original leads to a new processed file.
+Files in `fileadmin/_processed_` are cachable too, since file modifications to the original leads to a new processed file.
 
 So you can add
 
