@@ -1,8 +1,6 @@
 <?php
 namespace Lemming\Cachebuster\ViewHelpers;
 
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
-
 class ResourceViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Uri\ResourceViewHelper {
 
 	/**

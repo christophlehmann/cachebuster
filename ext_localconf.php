@@ -1,6 +1,5 @@
 <?php
 
-
 if (TYPO3_MODE === 'FE') {
 	$signalSlotDispatcher->connect(
 		'TYPO3\\CMS\\Core\\Resource\\ResourceStorage',
