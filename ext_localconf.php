@@ -10,5 +10,8 @@ if (TYPO3_MODE === 'FE') {
 }
 
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\\CMS\\Fluid\\ViewHelpers\\Uri\\ResourceViewHelper'] = array(
-    'className' => 'Lemming\\Cachebuster\\ViewHelpers\\ResourceViewHelper',
+	'className' => 'Lemming\\Cachebuster\\XClass\\ResourceViewHelper',
+);
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects']['TYPO3\\CMS\\Core\\Resource\\ResourceFactory'] = array(
+	'className' => 'Lemming\\Cachebuster\\XClass\\ResourceFactory',
 );

@@ -1,5 +1,5 @@
 <?php
-namespace Lemming\Cachebuster\ViewHelpers;
+namespace Lemming\Cachebuster\XClass;
 
 class ResourceViewHelper extends \TYPO3\CMS\Fluid\ViewHelpers\Uri\ResourceViewHelper {
 
